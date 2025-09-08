@@ -1,1 +1,59 @@
+## Folder Structure
+
+PolynomialSolver/
+├── lib/json-simple-1.1.1.jar
+├── src/PolynomialSolver.java
+└── input.json
+```
+
+Instead of triple backticks inside triple backticks.
+
+2. Remove extra \`\`\`\` around some sections (`Compile & Run`, `Sample Output`) to prevent Markdown rendering issues.
+
+Here’s the **cleaned-up version** of your README.md:
+
+---
+
+````markdown
 # PolynomialSolver
+
+## Description
+Reads a JSON file containing polynomial roots and prints the k-th root in sorted order in JSON format.
+
+## Folder Structure
+
+PolynomialSolver/
+├── lib/json-simple-1.1.1.jar
+├── src/PolynomialSolver.java
+└── input.json
+
+## Compile & Run
+
+### Windows
+```cmd
+javac -cp ".;lib/json-simple-1.1.1.jar" src/PolynomialSolver.java
+java -cp ".;lib/json-simple-1.1.1.jar;src" PolynomialSolver
+````
+
+### Linux / Mac
+
+```bash
+javac -cp ".:lib/json-simple-1.1.1.jar" src/PolynomialSolver.java
+java -cp ".:lib/json-simple-1.1.1.jar:src" PolynomialSolver
+```
+
+## Sample Output
+
+```json
+"7": {
+    "base": "3",
+    "value": "20120221122211000100210021102001201112121"
+}
+```
+
+## Notes
+
+* Works for any `n` and `k`.
+* Handles non-consecutive keys (like `1,2,3,6`).
+* Always prints in the format expected for submission.
+
