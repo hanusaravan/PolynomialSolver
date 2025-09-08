@@ -37,9 +37,8 @@ java -cp ".:lib/json-simple-1.1.1.jar:src" PolynomialSolver
 ## Sample Output
 
 ```json
-"7": {
-    "base": "3",
-    "value": "20120221122211000100210021102001201112121"
+{
+  "c": 11760
 }
 ```
 
@@ -48,5 +47,6 @@ java -cp ".:lib/json-simple-1.1.1.jar:src" PolynomialSolver
 * Works for any `n` and `k`.
 * Handles non-consecutive keys (like `1,2,3,6`).
 * Always prints in the format expected for submission.
+
 
 
