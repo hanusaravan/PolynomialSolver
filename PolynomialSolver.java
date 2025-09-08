@@ -18,7 +18,7 @@ public class PolynomialSolver {
             JSONObject keysObj = (JSONObject) jsonObject.get("keys");
             int n = ((Long) keysObj.get("n")).intValue(); // number of roots
 
-            // Get all root keys in sorted order
+            // Collect all root keys in sorted order
             Set<String> rootKeys = new TreeSet<>();
             for (Object keyObj : jsonObject.keySet()) {
                 String key = (String) keyObj;
@@ -29,6 +29,7 @@ public class PolynomialSolver {
 
             BigInteger product = BigInteger.ONE;
 
+            // Multiply all roots
             for (String key : rootKeys) {
                 JSONObject root = (JSONObject) jsonObject.get(key);
                 String baseStr = (String) root.get("base");
